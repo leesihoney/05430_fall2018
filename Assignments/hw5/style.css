@@ -1,0 +1,378 @@
+/* Common for all pages */
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Gill Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+
+/* navigation design */
+
+nav {
+    background-color: #F6F4F2;
+    min-height: 67px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+/* From https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_basic_css */
+nav .buttons{
+    list-style-type: none;
+    padding-right: 5%;
+}
+
+nav .logo{
+    display: block;
+    float: left;
+    padding-left: 5%;
+}
+
+nav ul li{
+    float: right;
+    display: block;
+    text-align: center;
+    padding-left: 5%;
+    padding-top: 1%;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+nav ul li a:hover, nav ul li a:active{
+    color: #4A4A4A;
+}
+
+nav ul li a:visited {
+    color: inherit;
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    left: 0 ;
+    bottom: -20px;
+    width: 100%;
+    min-height: 30px;
+    background-color: #F6F4F2;
+    padding-top: 1%;
+}
+
+.footer-logo {
+    float: left;
+    padding-left: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+.copyright {
+    float: right;
+    padding-right: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+
+/* Jumbotrons for home page and products page(Big image right below a navigation bar) */
+.jumbotron {
+    min-height: 460px;
+    background-image: url("images/jumbotron_image.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+
+.jumbotron h1 {
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 72px;
+    font-weight: bold;
+    padding-top: 5%;
+}
+
+.jumbotron .jumbotron-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    padding: 1.5% 1%;
+    background: #6B4D3D;
+    font-size: 1em;
+    border-radius: 10%;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    width: 10%;
+    letter-spacing: 0.05em;
+}
+
+.jumbotron .jumbotron-button:hover{
+    border-style: solid;
+    border-width: 0.1em;
+}
+
+.jumbotron-products {
+    min-height: 460px;
+    background-image: url("images/products_jumtrotron_image.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+
+.jumbotron-products h1 {
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 72px;
+    font-weight: bold;
+    padding-top: 10%;
+}
+
+.jumbotron-products p {
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    font-size: 115%;
+    letter-spacing: 0.5px;
+}
+
+
+/* Only for homepage (Online Order Instructions) */
+.exp-title {
+    display: block;
+    text-align: center;
+    margin: auto;
+    font-size: 2em;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+/* Products and detail pages (shows the structure of this page) */
+.sitemap {
+    display: block;
+    padding-left: 3.5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+
+/* Homepage and Products page, using a grid display */
+/* From https://www.w3schools.com/css/css_grid.asp */
+.row {
+    width: 90%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 1%;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+.row>div {
+    text-align: center;
+    margin-bottom: 15%;
+}
+
+/* instructions from home page */
+.process-title {
+    margin-top: 5%;
+    font-size: 1.25em;
+}
+
+.process img{
+    width: 100%;
+    height: 100%;
+}
+/* product.html each of cinnamon roll */
+.menu {
+    position: relative;
+}
+.menu a{
+    color: #111111;
+}
+
+.menu a:hover {
+    color: blue;
+}
+
+.menu img {
+    width: 100%;
+    height: 100%;
+}
+
+.menu:hover .overlay{
+    opacity: 1;
+}
+
+.menu .menu-label {
+    margin-top: 2%;
+}
+
+.menu-name{
+    padding-left: 0%;
+    float: left;
+}
+
+.menu-price {
+    padding-right: 0%;
+    float: right;
+}
+
+/* product.html, use overlay feature */
+/* from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_fade */
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 93%;
+  width: inherit;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #4A4A4A;
+}
+
+/* from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_fade */
+.details {
+    border-radius: 10%;
+    border-style: solid;
+    border-width: 0.1em;
+    color: white;
+    font-size: 1.25em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 3%;
+}
+
+/* detail view page, use 2 rows of a grid system */
+.detailed-row {
+    width: 90%;
+    margin-top: 8%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 10%;
+}
+
+.detailed-row .images {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 10.3%;
+}
+
+.detailed-row .images img{
+    display: inline;
+}
+
+.detailed-row .images .main_images {
+    width: 100%;
+    height: 100%;
+}
+.detailed-row .images .direction_icon {
+    padding-bottom: 28%;
+}
+
+
+.detailed-row .images .active_buttons {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.detailed-row .options {
+    width: fit-content;
+}
+
+/* The right part of the view detail page */
+.options .roll-title{
+    font-size: 2.5em;
+    padding-bottom: 12%;
+}
+
+.options .roll-price, .roll-qty, .roll-glazing{
+    font-size: 1.5em;
+    padding-bottom: 5%;
+}
+.options select {
+    min-height: 25px;
+    margin-left: 24%;
+}
+
+.options .dropdown-two {
+    margin-left: 15%;
+}
+.options .price {
+    padding-left: 21%;
+}
+.detailed-buttons {
+    margin-top: 15%;
+}
+
+/* similar to the one on the first homepage*/
+.detailed-buttons .buy-now {
+    display: block;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2% 2%;
+    background: #6B4D3D;
+    font-size: 18px;
+    border-radius: 10%;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    width: fit-content;
+    letter-spacing: 0.53px;
+}
+
+.detailed-buttons .cart-item {
+    display: block;
+    float: left;
+    margin-left: 3%;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 0.1em;
+    border-color: #6B4D3D;
+    padding: 1.5% 2%;
+    background: #FFFFFF;
+    font-size: 18px;
+    border-radius: 10%;
+    color: #6B4D3D;
+    text-align: center;
+    text-decoration: none;
+    width: fit-content;
+    letter-spacing: 0.53px;
+}
+
+
+
+

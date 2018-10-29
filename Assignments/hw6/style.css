@@ -1,0 +1,619 @@
+/* Common for all pages */
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Gill Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 16px;
+}
+
+#wrapper {
+    height: 100vh;
+    position: relative;
+}
+
+
+/* navigation design */
+
+nav {
+    background-color: #F6F4F2;
+    min-height: 67px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+/* From https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_basic_css */
+nav .buttons{
+    list-style-type: none;
+    padding-right: 100px;
+}
+
+nav .logo{
+    display: block;
+    float: left;
+    padding-left: 100px;
+}
+
+nav ul li{
+    float: right;
+    display: block;
+    text-align: center;
+    padding-left: 5%;
+    padding-top: 1%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+nav ul li a:hover, nav ul li a:active{
+    color: #4A4A4A;
+}
+
+nav ul li a:visited {
+    color: inherit;
+}
+
+/* Footer */
+footer {
+    margin-top: 54px;
+    width: 100%;
+    min-height: 30px;
+    background-color: #F6F4F2;
+    padding-top: 1%;
+}
+
+.footer-logo {
+    float: left;
+    padding-left: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+.copyright {
+    float: right;
+    padding-right: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+/********* LOG-IN **********/
+.login-row {
+    width: 362px;
+    height: 423px;
+    margin: 0 auto;
+}
+
+.login-title {
+    font-size: 48px;
+    display: block;
+    text-align: center;
+    margin: 100px auto 54px auto;
+}
+
+.login-box {
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    padding: 55px 40px;
+}
+
+.login-label {
+    font-size: 1em;
+    margin-bottom: 8px;
+}
+
+.login-box form input {
+    width: 100%;
+    height: 36px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.login-input {
+    margin-bottom: 8px;
+}
+
+.login-button {
+    background-color: #6B4D3D;
+    color: white;
+    margin-top: 16px;
+    margin-bottom: 22px;
+}
+.sublinks-container a{
+    color: #6B4D3D;
+    font-weight: lighter;
+    text-decoration: none;
+}
+
+.sublinks-container a:hover{
+    font-weight: normal;
+
+}
+.sub-link-signup {
+    display: inline-block;
+    float:left;
+}
+
+.sub-link-signup {
+    display: inline-block;
+    float: right;
+}
+
+/* Jumbotrons for home page and products page(Big image right below a navigation bar) */
+.jumbotron {
+    min-height: 480px;
+    background-image: url("images/jumbotron_image.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+
+.jumbotron h1 {
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 72px;
+    font-weight: bold;
+    padding-top: 5%;
+}
+
+.jumbotron #jumbotron-button {
+    display: block;
+    margin: 12px auto;
+    padding: 1.5%;
+    background: #6B4D3D;
+    font-size: 1em;
+    border-radius: 20px;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    width: 136px;
+    letter-spacing: 0.05em;
+}
+
+.jumbotron #jumbotron-button:hover{
+    border-style: solid;
+    border-width: 0.1em;
+}
+
+.jumbotron-products {
+    min-height: 460px;
+    background-image: url("images/products_jumtrotron_image.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+
+.jumbotron-products-exp{
+    padding: 10% 0;
+}
+.jumbotron-products-exp h1 {
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 72px;
+    font-weight: bold;
+}
+
+.jumbotron-products-exp p {
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    font-size: 115%;
+    letter-spacing: 0.5px;
+}
+
+
+/* Only for homepage (Online Order Instructions) */
+.exp-title {
+    display: block;
+    text-align: center;
+    margin: auto;
+    font-size: 2em;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+/* Products and detail pages (shows the structure of this page) */
+#sitemap {
+    display: inline-block;
+    margin-top: 5%;
+    margin-bottom: 1em;
+}
+
+#flash {
+    text-align: center;
+    width: 300px;
+    height: 18px;
+    position: absolute;
+    margin: 10px auto;
+    left: 0;
+    right: 0;
+    display: inline-block;
+    visibility: hidden;
+    padding: 10px;
+    border-style: solid;
+    border-width: 0.05em;
+    border-radius: 2em;
+    border-color: #004400;
+    background-color: #A2D890;
+    color: #004400 ;
+}
+/* Homepage and Products page, using a grid display */
+/* From https://www.w3schools.com/css/css_grid.asp */
+.row {
+    width: 1200px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 1%;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+.row>div {
+    text-align: center;
+    margin-bottom: 15%;
+}
+
+/* instructions from home page */
+.process-title {
+    margin-top: 5%;
+    font-size: 1.25em;
+}
+
+.process img{
+    width: 100%;
+    height: 100%;
+}
+/* product.html each of cinnamon roll */
+.menu {
+    position: relative;
+}
+.menu a{
+    color: #111111;
+}
+
+.menu a:hover {
+    color: blue;
+}
+
+.menu img {
+    width: 100%;
+    height: 100%;
+}
+
+.menu:hover .overlay{
+    opacity: 1;
+}
+
+.menu .menu-label {
+    margin-top: 2%;
+}
+
+.menu-name{
+    padding-left: 0%;
+    float: left;
+}
+
+.menu-price {
+    padding-right: 0%;
+    float: right;
+}
+
+/* product.html, use overlay feature */
+/* from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_fade */
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 93%;
+  width: inherit;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #4A4A4A;
+}
+
+/* from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_fade */
+.details {
+    border-radius: 10%;
+    border-style: solid;
+    border-width: 0.1em;
+    color: white;
+    font-size: 1.25em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 3%;
+}
+
+/* detail view page, use 2 rows of a grid system */
+.detailed-row {
+    width: 90%;
+    margin-top: 8%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 10%;
+}
+
+.detailed-row #images {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 10.3%;
+}
+
+.detailed-row #images img{
+    display: inline;
+}
+
+.detailed-row #images .main_images {
+    width: 100%;
+    height: 100%;
+}
+.detailed-row #images .direction_icon {
+    padding-bottom: 28%;
+}
+
+
+.detailed-row #images .active_buttons {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.detailed-row .options {
+    width: fit-content;
+}
+
+/* The right part of the view detail page */
+.options #roll-title{
+    font-size: 2.5em;
+    padding-bottom: 12%;
+}
+
+.options #roll-price, #roll-qty, #roll-glazing{
+    font-size: 1.5em;
+    padding-bottom: 5%;
+}
+.options select {
+    min-height: 25px;
+    margin-left: 24%;
+}
+
+.options #dropdown-two {
+    margin-left: 15%;
+}
+.options .price {
+    padding-left: 21%;
+}
+.detailed-buttons {
+    margin-top: 15%;
+}
+
+/* similar to the one on the first homepage*/
+.detailed-buttons #buy-now{
+    display: block;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2% 2%;
+    background: #6B4D3D;
+    font-size: 18px;
+    border-radius: 10%;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    width: fit-content;
+    letter-spacing: 0.53px;
+}
+
+.detailed-buttons #cart-item{
+    display: block;
+    float: left;
+    margin-left: 3%;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 0.1em;
+    border-color: #6B4D3D;
+    padding: 1.5% 2%;
+    background: #FFFFFF;
+    font-size: 18px;
+    border-radius: 10%;
+    color: #6B4D3D;
+    text-align: center;
+    text-decoration: none;
+    width: fit-content;
+    letter-spacing: 0.53px;
+}
+
+
+/* Shopping Cart */
+.shopping-cart-wrapper .row{
+    display: flex;
+}
+.shopping-cart-wrapper .row>div {
+    margin-bottom: 0;
+}
+
+#page-title {
+    font-size: 3em;
+
+}
+
+#orders, .orders-element{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#orders {
+    width: 100%;
+    border-style: solid;
+    border-left: 0.5px;
+    border-right: 0.5px;
+    border-color: #979797;
+    margin: 1.5em 0;
+    padding-top: 1em;
+}
+
+#no-orders-message{
+    margin: 75px auto;
+    font-size: 2em;
+    font-weight: lighter;
+}
+
+.order-box {
+    width: 100%;
+    position: relative;
+    display: block;
+    float: left;
+    margin-bottom: 1em;
+}
+
+.order-image {
+    display: inline-flex;
+    width: 14%;
+}
+
+.order-box-part {
+    display: inline-block;
+}
+
+.order-box-part, .order-image {
+    float: left;
+}
+
+.order-image img{
+    width: 100%;
+    height: 100%;
+}
+
+.order-box-part {
+    width: 14%;
+    margin-left: 2.5%;
+    position: relative;
+}
+
+.order-box-label {
+    font-size: 0.75em;
+    letter-spacing: -0.12px;
+    text-align: justify;
+    margin-top: 0.75em;
+    margin-bottom: 1em;
+}
+
+.order-box-value, .order-box-status {
+    text-align: left;
+}
+.order-box-value {
+    font-size: 1.5em;
+    letter-spacing: -0.25px;
+    width: 160px;
+    margin-bottom: 1.75em;
+}
+
+.order-box-status {
+    font-size: 0.75em;
+    letter-spacing: -0.12px;
+}
+
+.order-dropdown {
+    text-align: left;
+    height: 1.5em;
+}
+
+.total{
+    display: block !important;
+}
+
+#total-price{
+    width: 100%;
+    text-align: right;
+    font-size: 1.5em;
+    letter-spacing: -0.25px;
+    display: inline-block;
+    position: relative;
+    float: right !important;
+}
+
+#total-price-value {
+    margin-left: 31px;
+}
+
+#shopping-cart-buttons {
+    width: 100%;
+    float: right;
+    text-align: right;
+    margin-top: 40px;
+}
+
+#primary-button, #secondary-button {
+    font-size: 1em;
+    letter-spacing: 0.53px;
+    text-align: center;
+    width: 187px;
+    height: 54px;
+    border-radius: 9px;
+
+}
+
+#primary-button {
+    border: 1px solid #6D4F40;
+    color: #ffffff;
+    background: #6B4D3D;
+    margin-left: 33px;
+}
+
+#secondary-button {
+    color: #6B4D3D;
+    border: 1px solid #6D4F40;
+    background: #ffffff;
+}
+
+.primary-secondary-icon {
+    vertical-align: middle;
+}
+
+.primary-button-label, .secondary-button-label {
+    margin-left: 1.25em;
+}
+
+.orders-element{
+    display: flex;
+}
+.trash-can-button {
+    display: inline-block;
+    float: right;
+    width: 50px;
+    margin-top: 0.75em;
+    border-style: none;
+}
+#button-row{
+    margin: 0;
+}
+.trash-can {
+}

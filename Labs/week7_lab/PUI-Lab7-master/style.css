@@ -1,0 +1,34 @@
+body {
+    font-family: sans-serif;
+    color: lavender;
+    background: #4e40c3;
+}
+
+h1 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 60pt;
+    margin-bottom: 0px;
+    font-weight: normal;
+}
+
+h3 {
+  font-size: 16pt;
+  color: floralwhite;
+  font-weight: lighter;
+  font-style: oblique;
+}
+
+#animal-img {
+  border: 20px solid darkslateblue;
+  border-radius: 10px;
+  padding: 20px;
+  height: 50vh;
+  width: 50vh;
+  object-fit: cover;
+}
+
+#container {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+}

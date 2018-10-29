@@ -1,0 +1,27 @@
+HTML Web Storage
+
+localStorage: no expiration
+    localStorage.setItem("name","Teru")
+    localStorage.getItem("name")
+
+
+
+
+
+Storing Objects in Web Storage (localStorage only stores string)
+
+    JSON = "JavaScript Object Notation", Makes it easy to store and send JavaScript Objects
+
+    var cat = { name:: "Teru", weight: 10, age: 1.5}
+
+    localStorage.setItem("myCat", JSON.stringify(cat))
+    JSON.parse(localStorage.getItem("myCat"));
+
+
+Issues with Client-Side Storage
+
+Good for quick accerss, however,
+     - Limited Space
+
+Server-Side Storage
+    - Database Management System (MySQL, MongoDB)

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <title> Bun Bun Bake Shop | Products </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div id = "wrapper" class = "shopping-cart-wrapper">
+        <!-- Navigiation -->
+        <nav>
+            <a href = "index.html"> <img src = "images/logo.png" class = "logo" alt = "Bun Bun Bake Shop"> </a>
+            <!-- Buttons -->
+            <ul class = "buttons">
+                <li> <a href = "shopping_cart.html" class = "nav-button"> My Cart </a> </li>
+                <li> <a href = "product.html" class = "nav-button"> Products </a> </li>
+                <li> <a class = "nav-button"> About </a> </li>
+                <li> <a class = "nav-button href = login.html"> Sign In </a> </li>
+            </ul>
+        </nav>
+
+
+        <!-- Breadcrumb -->
+        <div class = "row">
+            <span id = "sitemap" class = "shopping-cart-breadcrumb"> Home > My Cart</span>
+        </div>
+
+        <!-- Contents -->
+        <div class = "row">
+            <span id = "page-title"> Shopping Cart </span>
+        </div>
+
+        <!-- Order Box -->
+        <div class = "row">
+            <ul id = "orders">
+
+            </ul>
+        </div>
+
+        <!-- Price Label -->
+        <div class = "row">
+            <div id = "total-price">
+                Total Price :<span id = "total-price-value"> </span>
+            </div>
+        </div>
+
+        <!--  Two Buttons -->
+        <div class = "row">
+            <div id = "shopping-cart-buttons">
+                <button id = "secondary-button">
+                    <img src = "images/left.png" alt = "left" class = "primary-secondary-icon">
+                    <span class = "secondary-button-label"> Back </span>
+                </button>
+
+                <button id = "primary-button">
+                    <img src = "images/order-icon.png" alt = "order" class = "primary-secondary-icon">
+                    <span class = "primary-button-label"> Order Now </span>
+                </button>
+            </div>
+        </div>
+
+
+
+
+        <!-- FOOTER -->
+        <footer>
+            <div class = "footer-logo"> Bun Bun Bake Shop </div>
+            <div class = "copyright"> copyright @ Siheon Lee </div>
+        </footer>
+    </div>
+</body>
+</html>
