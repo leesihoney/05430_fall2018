@@ -126,5 +126,4 @@ function hasAnimal(animal){
 
 function findTargetAnimal($this){
     $animal = $this.parent();
-    if($animal.)
 }

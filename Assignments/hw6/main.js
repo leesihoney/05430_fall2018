@@ -15,6 +15,7 @@ $(document).ready(function()
     if (footerTop < docHeight) {
         $('footer').css('margin-top', 10+ (docHeight - footerTop) + 'px');
     }
+
     // product-detail page
     $('#cart-item').click(function(){
         // get cinnamon roll name
@@ -31,18 +32,27 @@ $(document).ready(function()
         // JSON object
         var objToSave = new Order (roll_name, roll_img, roll_price, quantity, glazing);
         var orderArray = JSON.parse(localStorage.getItem("order"));
+
+        // When there are orders in the storage already
         if(orderArray!=null && orderArray.constructor===Array && orderArray.length!=0)
         {
             console.log("Existed before");
-            orderArray.push(objToSave);
-            saveDataLocally(orderArray, objToSave);
+            if(checkDuplicateOrder(objToSave, orderArray)){
+                showDenial();
+            }
+            else{
+                orderArray.push(objToSave);
+                saveDataLocally(orderArray, objToSave);
+            }
         }
+        // When there is an empty cart
         else if(orderArray!=null && orderArray.constructor===Array && orderArray.length==0)
         {
             console.log("Empty Order Array");
             orderArray.push(objToSave);
             saveDataLocally(orderArray, objToSave);
         }
+        // When it is first time for user putting an item to the cart
         else
         {
             console.log("First Time putting an order");
@@ -97,6 +107,17 @@ $(document).ready(function()
     });
 });
 
+function checkDuplicateOrder(order, orderArray){
+    let orderName = order.name;
+    // loop through an order array
+    for(let i; i<orderArray.length; i++)
+    {
+        if(orderArray[i]===orderName){
+            return false;
+        }
+    }
+    return true;
+}
 function deleteOrder(orderList, jThis)
 {
     // find a target div
@@ -136,18 +157,20 @@ function findTargetOrderIndex(targetName, arr){
 function showConfirmation()
 {
     $('#flash').html("Successfully carted item!");
+    $('#flash').css("border-color", "#004400");
+    $('#flash').css("background-color", "#A2D890");
+    $('#flash').css("color", "#004400");
     $('#flash').css("visibility", "visible");
     $('#flash').show().delay( 1000 ).fadeOut();
 };
 
 function showDenial()
 {
-    $('#flash').html("Failed to cart the item!");
+    $('#flash').html("Already have the item in the cart!");
     $('#flash').css("border-color", "#4F0010");
     $('#flash').css("background-color", "#ED9EAE");
     $('#flash').css("color", "#4F0010");
     $('#flash').css("visibility", "visible");
-    console.log("Failed to cart item!");
 
     $('#flash').show().delay( 1000 ).fadeOut();
 };
